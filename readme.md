@@ -10,7 +10,9 @@ Clone the repo, then:
 # Grab the server dependency
 git submodule update --init
 
-# Install everything else
+# Install everything
+cd server && npm install
+cd ..
 npm install
 
 # Run the server
