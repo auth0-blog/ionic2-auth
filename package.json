@@ -13,7 +13,8 @@
   "devDependencies": {
     "awesome-typescript-loader": "0.15.10",
     "strip-sourcemap-loader": "0.0.1",
-    "typescript": "1.7.5"
+    "typescript": "1.7.5",
+    "typings": "^0.6.8"
   },
   "name": "quotes-app",
   "description": "quotes-app: An Ionic project",
