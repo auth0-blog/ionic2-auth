@@ -13,7 +13,6 @@ export class ProfilePage {
   LOGIN_URL: string = "http://localhost:3001/sessions/create";
   SIGNUP_URL: string = "http://localhost:3001/users";
   
-  auth: AuthService;
   // When the page loads, we want the Login segment to be selected
   authType: string = "login";
   contentHeader: Headers = new Headers({"Content-Type": "application/json"});
@@ -22,8 +21,7 @@ export class ProfilePage {
   local: Storage = new Storage(LocalStorage);
   user: string;  
   
-  constructor(private http: Http) {
-    this.auth = AuthService;
+  constructor(private http: Http, private auth: AuthService) {
     let token = this.local.get('id_token')._result;
     if(token) {
       this.user = this.jwtHelper.decodeToken(token).username;

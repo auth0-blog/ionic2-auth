@@ -11,11 +11,8 @@ export class QuotesPage {
   API: string = "http://localhost:3001/api";
   quote: string;
   error: string;
-  auth: AuthService;
   
-  constructor(private http: Http, private authHttp: AuthHttp) {
-    this.auth = AuthService;
-  }
+  constructor(private http: Http, private authHttp: AuthHttp, private auth: AuthService) {}
   
   getQuote() {
     // Use a regular Http call to access unsecured routes
