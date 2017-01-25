@@ -12,8 +12,8 @@ import {Type} from 'angular2/core';
 export class TabsPage {
   // this tells the tabs component which Pages
   // should be each tab's root Page
-  profilePage: Type = ProfilePage;
-  quotesPage: Type = QuotesPage;
+  profilePage: any = ProfilePage;
+  quotesPage: any = QuotesPage;
 
   constructor() {}
 
